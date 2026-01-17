@@ -4,7 +4,7 @@ NVDA Options Pricing & Risk Analysis
 =====================================
 National Level Hackathon Submission
 
-Team: [Your Team Name]
+Team: [AMX] - AAYUSH KUMAR, ARYAMAN MANDAL
 Date: January 2026
 
 This analysis examines a live NVDA call option using:
@@ -196,7 +196,7 @@ def run_analysis():
     if put_data_chart:
         chart_gen.plot_call_put_comparison(call_data_chart, put_data_chart)
 
-    print(f"  Charts saved to: figures/")
+    print(f"  Charts saved to: outputs/")
 
     # Step 9: Generate report
     print_section("GENERATING REPORT")
@@ -210,7 +210,7 @@ def run_analysis():
         hedge=hedge,
         scenarios=scenarios
     )
-    print(f"  Report saved to: reports/")
+    print(f"  Report saved to: analysis/")
 
     # Summary
     print()

@@ -17,7 +17,15 @@ class ChartGenerator:
         self.colors = config.COLORS
         self.output_dir = config.FIGURES_DIR
 
-        plt.style.use(config.CHART_STYLE)
+        # Set plot style with fallback
+        try:
+            plt.style.use(config.CHART_STYLE)
+        except:
+            try:
+                plt.style.use('seaborn-whitegrid')
+            except:
+                plt.style.use('ggplot')
+        
         plt.rcParams['font.family'] = 'sans-serif'
         plt.rcParams['font.size'] = 10
 
