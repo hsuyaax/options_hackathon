@@ -1,0 +1,101 @@
+
+================================================================================
+                        CONSULTING MEMORANDUM
+================================================================================
+
+TO:       Portfolio Management Team
+FROM:     Quantitative Analysis Desk
+DATE:     2026-01-17
+RE:       NVDA Options Analysis
+
+--------------------------------------------------------------------------------
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+
+Position:     NVDA $210 Call
+Expiration:   2026-02-20 (33 days)
+Stock Price:  $186.23
+
+FINDING: Option is EXPENSIVE relative to historical volatility
+         (+111.7% vs model price)
+
+RECOMMENDATION: Consider selling premium or waiting for better entry
+
+--------------------------------------------------------------------------------
+PRICING ANALYSIS
+--------------------------------------------------------------------------------
+
+  Market Price:       $1.31
+  Model Price (HV):   $0.60
+  Model Price (IV):   $1.27
+
+  Valuation:          EXPENSIVE (+111.7%)
+
+--------------------------------------------------------------------------------
+VOLATILITY
+--------------------------------------------------------------------------------
+
+  21-Day Realized:    27.7%
+  Implied Vol:        34.0%
+  Risk Premium:       +6.3%
+  Regime:             NORMAL (25th percentile)
+
+--------------------------------------------------------------------------------
+GREEKS
+--------------------------------------------------------------------------------
+
+  Delta:   0.138    (~14 shares per contract)
+  Gamma:   0.01154
+  Theta:   $-6.59/day
+  Vega:    $12.32 per 1% IV
+
+--------------------------------------------------------------------------------
+HEDGING
+--------------------------------------------------------------------------------
+
+  Position Size:     10 contracts
+  Delta Exposure:    138 shares
+  To Hedge:          SHORT 138 shares
+  Capital Required:  $25,621.57
+
+--------------------------------------------------------------------------------
+SCENARIOS (1 Week)
+--------------------------------------------------------------------------------
+
+  Best Case:    Bull Rally      $    +7,850
+  Worst Case:   Vol Crush       $    -1,144
+
+--------------------------------------------------------------------------------
+MONITORING
+--------------------------------------------------------------------------------
+
+  - Stock price relative to $210 strike
+  - Implied volatility changes
+  - Time decay acceleration near expiry
+  - Delta drift requiring hedge rebalance
+
+--------------------------------------------------------------------------------
+MODEL LIMITATIONS
+--------------------------------------------------------------------------------
+
+Black-Scholes Assumptions:
+  - Constant volatility (reality: volatility changes over time)
+  - Lognormal price distribution (reality: fat tails, skewness)
+  - No dividends (NVDA pays minimal dividends, acceptable)
+  - European exercise (these are American options)
+  - Continuous trading (reality: gaps, halts possible)
+
+Practical Considerations:
+  - Bid-ask spread impact on entry/exit
+  - Transaction costs reduce profitability
+  - Model uses mid-price; actual fills may differ
+  - Greeks change continuously (gamma risk)
+
+Risk Factors:
+  - Earnings announcements can cause vol spikes
+  - Liquidity can dry up in stress scenarios
+  - Early exercise risk for American options
+
+================================================================================
+                          CONFIDENTIAL
+================================================================================

@@ -1,0 +1,53 @@
+{
+  "generated": "2026-01-17T14:39:39.641403",
+  "position": {
+    "ticker": "NVDA",
+    "strike": 210.0,
+    "expiration": "2026-02-20",
+    "dte": 33,
+    "stock_price": 186.22999572753903,
+    "option_price": 1.31,
+    "pct_otm": 12.763789302362069
+  },
+  "pricing": {
+    "market_price": 1.31,
+    "model_price_hv": 0.6012722749850994,
+    "model_price_iv": 1.2729624755504183,
+    "mispricing_pct": 111.71148720967794,
+    "valuation": "EXPENSIVE"
+  },
+  "volatility": {
+    "hv_21d": 0.27739225549972574,
+    "implied_vol": 0.3403386279296875,
+    "vrp": 0.06294637242996176,
+    "regime": "NORMAL"
+  },
+  "greeks": {
+    "delta": 0.13758026262305273,
+    "gamma": 0.011541211466683054,
+    "theta_daily": -0.06588401813191488,
+    "vega": 0.12316377290159039
+  },
+  "hedge": {
+    "contracts": 10,
+    "delta_exposure": 137.5802626230527,
+    "hedge_shares": -137.5802626230527,
+    "hedge_capital": 25621.571720484804
+  },
+  "scenarios": {
+    "best": {
+      "name": "Bull Rally",
+      "stock_change": 15.0,
+      "vol_change": -5.0,
+      "pnl": 7850.395134919838,
+      "pnl_pct": 599.266804192354
+    },
+    "worst": {
+      "name": "Vol Crush",
+      "stock_change": 0.0,
+      "vol_change": -10.0,
+      "pnl": -1143.7812840651663,
+      "pnl_pct": -87.31154840192109
+    }
+  }
+}
