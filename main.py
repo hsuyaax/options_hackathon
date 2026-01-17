@@ -196,7 +196,7 @@ def run_analysis():
     if put_data_chart:
         chart_gen.plot_call_put_comparison(call_data_chart, put_data_chart)
 
-    print(f"  Charts saved to: outputs/")
+    print(f"  Charts saved to: figures/")
 
     # Step 9: Generate report
     print_section("GENERATING REPORT")
@@ -210,7 +210,7 @@ def run_analysis():
         hedge=hedge,
         scenarios=scenarios
     )
-    print(f"  Report saved to: analysis/")
+    print(f"  Report saved to: reports/")
 
     # Summary
     print()

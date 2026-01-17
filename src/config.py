@@ -23,8 +23,8 @@ class Config:
     # Paths
     ROOT_DIR = Path(__file__).parent.parent
     DATA_DIR = ROOT_DIR / "data"
-    FIGURES_DIR = ROOT_DIR / "outputs"
-    REPORTS_DIR = ROOT_DIR / "analysis"
+    FIGURES_DIR = ROOT_DIR / "figures"
+    REPORTS_DIR = ROOT_DIR / "reports"
 
     # Ensure directories exist
     FIGURES_DIR.mkdir(exist_ok=True)

@@ -18,20 +18,34 @@ It was built as a submission for the National Hackathon 2026, demonstrating prof
 - **Skew Analysis**: Automated detection of Put vs. Call implied volatility spreads.
 
 ### 2. Risk Management (Greeks)
-- Real-time calculation of **Delta, Gamma, Theta, Vega, and Rho**.
+- **Robust Calculation**: `GreeksCalculator` uses analytical derivatives rather than finite differences for precision.
+- **Trader-Centric Units**: Normalizes mathematical outputs (e.g., Vega as "Dollars per 1% Vol") for immediate decision making.
 - **Delta-Neutral Hedging**: Automated calculation of share requirements to hedge directional risk.
-- **Gamma Risk**: Monitoring of convexity exposure.
 
 ### 3. Stress Testing & Scenarios
+- **Non-Linear Re-pricing**: The `ScenarioEngine` performs full Black-Scholes re-calculation for every scenario, capturing convexity (Gamma/Speed) that linear models miss.
 - **Sensitivity Analysis**: 2D parameter sweeps for Volatility (50-200%) and Time Decay.
-- **Scenario Engine**: Simulates "Vol Crush" and "Bull Rally" P&L outcomes.
+- **Tail Risk**: Simulates extreme events like "Vol Crush" and "Market Crashes".
 - **Model Limitations**: Professional consulting memo detailing assumptions and tail risks.
+
+## 💡 Design Philosophy
+
+### Precision over Approximation
+While many tools use linear approximations (Delta/Gamma) for risk estimation, this engine re-calculates exact Black-Scholes prices for every scenario. This ensures accuracy even during extreme market moves where convexity breaks linear models.
+
+### Actionable Intelligence
+The system doesn't just output numbers; it contextualizes them.
+- **Unit Normalization**: Converting raw Greeks into "Trader Units" (e.g., Vega as "Dollars per 1% Vol").
+- **Consulting Memo**: Automatically generating a plain-English risk report summarizing the "So What?" of the data.
+
+[**➡️ Read the Technical Whitepaper**](docs/TECHNICAL_WHITEPAPER.md) for a deep dive into the math and architecture.
 
 ## 📂 Project Structure
 
 ```
 options_hackathon/
 ├── data/                  # Historical and Option Chain CSVs
+├── docs/                  # Technical Whitepaper & Deep Dives
 ├── figures/               # Generated charts (Sensitivity, Greeks, Skew)
 ├── reports/               # Executive Consulting Memos
 ├── src/
