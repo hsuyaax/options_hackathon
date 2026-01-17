@@ -122,8 +122,8 @@ class DataLoader:
             'bid': best['bid'],
             'ask': best['ask'],
             'mid_price': (best['bid'] + best['ask']) / 2,
-            'open_interest': int(best['openInterest']),
-            'volume': int(best['volume']),
+            'open_interest': int(best['openInterest']) if pd.notnull(best['openInterest']) else 0,
+            'volume': int(best['volume']) if pd.notnull(best['volume']) else 0,
             'implied_volatility': best['impliedVolatility'],
             'pct_otm': best['pct_otm']
         }
